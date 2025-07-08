@@ -96,10 +96,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q        &kp W        &kp E           &kp R  &kp T      &none  &none  &kp Y    &mt RA(Y) U  &kp I      &mt RA(P) O  &kp P     &none
-&none  &mt RA(Q) A  &mt RA(S) S  &kp D           &kp F  &kp G      &none  &none  &kp H    &kp J        &kp K      &kp L        &kp SEMI  &none
-&none  &kp Z        &kp X        &kp C           &kp V  &kp B                    &kp N    &kp M        &kp COMMA  &kp DOT      &kp FSLH  &none
-                                 &super_backspc  &mo 1  &kp SPACE                &kp RET  &mo 2        &kp RALT
+&none  &kp Q        &kp W        &kp E           &kp R  &kp T      &none  &none  &kp Y       &mt RA(Y) U       &kp I           &mt RA(P) O        &kp P     &none
+&none  &mt RA(Q) A  &mt RA(S) S  &kp D           &kp F  &kp G      &none  &none  &mt LEFT H  &mt DOWN_ARROW J  &mt UP_ARROW K  &mt RIGHT_ARROW L  &kp SEMI  &none
+&none  &kp Z        &kp X        &kp C           &kp V  &kp B                    &kp N       &kp M             &kp COMMA       &kp DOT            &kp FSLH  &none
+                                 &super_backspc  &mo 1  &kp SPACE                &kp RET     &mo 2             &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
