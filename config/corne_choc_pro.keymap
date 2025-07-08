@@ -27,51 +27,61 @@
         tgl_layer_0 {
             bindings = <&tog 0>;
             key-positions = <34 41>;
+            layers = <0 2 1 4 3 5 6 7 8 9>;
         };
 
         tgl_layer_1 {
             bindings = <&tog 1>;
             key-positions = <41 35>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_2 {
             bindings = <&tog 2>;
             key-positions = <41 36>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_3 {
             bindings = <&tog 3>;
             key-positions = <41 37>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_4 {
             bindings = <&tog 4>;
             key-positions = <41 23>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_5 {
             bindings = <&tog 5>;
             key-positions = <41 24>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_6 {
             bindings = <&tog 6>;
             key-positions = <41 25>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_7 {
             bindings = <&tog 7>;
             key-positions = <41 9>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_8 {
             bindings = <&tog 8>;
             key-positions = <41 10>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_9 {
             bindings = <&tog 9>;
             key-positions = <41 11>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
         };
     };
 
