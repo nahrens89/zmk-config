@@ -86,13 +86,13 @@
 
         del_ctrl-del {
             bindings = <&mt LC(DELETE) DELETE>;
-            key-positions = <24 25>;
+            key-positions = <24 23>;
             layers = <0 2 1 3 4 6 7 8 9>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
+            key-positions = <4 3>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
@@ -172,10 +172,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&none  &none         &none            &none         &none         &none           &none  &none  &none         &kp N7        &kp N8        &kp N9        &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
-&none  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                      &shift_super  &trans        &space_tab                    &kp ENTER     &trans        &alt_ralt
+&none  &none  &none  &none   &none   &none   &none  &none  &none         &kp N7        &kp N8        &kp N9        &none  &none
+&none  &none  &none  &none   &none   &none   &none  &none  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
+&none  &none  &none  &none   &none   &none                 &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                     &trans  &trans  &trans                &trans        &trans        &trans
             >;
         };
 
