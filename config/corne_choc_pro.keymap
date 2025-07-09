@@ -104,11 +104,11 @@
     };
 
     behaviors {
-        ctrl_shift_super: ctrl_shift_super {
+        shift_super: shift_super {
             compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_SHIFT_SUPER";
+            label = "SHIFT_SUPER";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&caps_word>, <&kp LEFT_WIN>;
+            bindings = <&caps_word>, <&kp LEFT_WIN>;
         };
 
         alt_ralt: alt_ralt {
@@ -123,6 +123,20 @@
             label = "SPACE_TAB";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp TAB>;
+        };
+
+        shift_layer1: shift_layer1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_LAYER1";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&mo 1>;
+        };
+
+        ctrl_layer2: ctrl_layer2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_LAYER2";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&mo 2>;
         };
     };
 
@@ -139,10 +153,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q        &kp W        &kp E              &kp R  &kp T       &none  &none  &kp Y       &mt RA(Y) U       &kp I                &mt RA(P) O        &kp P     &none
-&none  &mt RA(Q) A  &mt RA(S) S  &kp D              &kp F  &kp G       &none  &none  &mt LEFT H  &mt DOWN_ARROW J  &mt UP_ARROW K       &mt RIGHT_ARROW L  &kp HOME  &none
-&none  &kp Z        &kp X        &kp C              &kp V  &kp B                     &kp N       &kp M             &mt COMMA SEMICOLON  &mt COLON PERIOD   &kp END   &none
-                                 &ctrl_shift_super  &mo 1  &space_tab                &kp RET     &mo 2             &alt_ralt
+&none  &kp Q        &kp W        &kp E         &kp R          &kp T       &none  &none  &kp Y       &mt RA(Y) U       &kp I                &mt RA(P) O        &kp P     &none
+&none  &mt RA(Q) A  &mt RA(S) S  &kp D         &kp F          &kp G       &none  &none  &mt LEFT H  &mt DOWN_ARROW J  &mt UP_ARROW K       &mt RIGHT_ARROW L  &kp HOME  &none
+&none  &kp Z        &kp X        &kp C         &kp V          &kp B                     &kp N       &kp M             &mt SEMICOLON COMMA  &mt COLON PERIOD   &kp END   &none
+                                 &kp LEFT_WIN  &shift_layer1  &space_tab                &kp RET     &ctrl_layer2      &alt_ralt
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
@@ -158,10 +172,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&none  &none         &none            &none              &none         &none           &none  &none  &none         &kp N7        &kp N8        &kp N9        &none  &none
-&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
-&none  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset         &bootloader   &studio_unlock                &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                      &ctrl_shift_super  &trans        &space_tab                    &kp ENTER     &trans        &alt_ralt
+&none  &none         &none            &none         &none         &none           &none  &none  &none         &kp N7        &kp N8        &kp N9        &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &none  &none  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
+&none  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                                      &shift_super  &trans        &space_tab                    &kp ENTER     &trans        &alt_ralt
             >;
         };
 
@@ -175,30 +189,30 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&none  &none  &kp CARET  &none              &kp DLLR       &kp GRAVE         &none  &none  &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS   &kp ASTERISK         &none
-&none  &none  &kp PIPE   &kp HASH           &kp AT_SIGN    &none             &none  &none  &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &mt BACKSLASH SLASH  &none
-&none  &none  &none      &none              &kp LESS_THAN  &kp GREATER_THAN                &kp UNDER          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL  &kp PERCENT          &none
-                         &ctrl_shift_super  &none          &space_tab                      &kp RET            &none                 &alt_ralt
+&none  &none  &kp CARET  &none         &kp DLLR       &kp GRAVE         &none  &none  &mt DOUBLE_QUOTES SQT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS   &kp ASTERISK         &none
+&none  &none  &kp PIPE   &kp HASH      &kp AT_SIGN    &none             &none  &none  &kp CARET              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &mt BACKSLASH SLASH  &none
+&none  &none  &none      &none         &kp LESS_THAN  &kp GREATER_THAN                &kp UNDER              &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL  &kp PERCENT          &none
+                         &shift_super  &none          &space_tab                      &kp RET                &none                 &alt_ralt
             >;
         };
 
         extra_layer_1 {
-            display-name = "FN";
+            display-name = "MEDIA/FN";
             bindings = <
-&none  &none  &none  &none   &none   &none   &none  &none  &none    &kp F7  &kp F8  &kp F9  &none  &none
-&none  &none  &none  &none   &none   &none   &none  &none  &kp F10  &kp F4  &kp F5  &kp F6  &none  &none
-&none  &none  &none  &none   &none   &none                 &none    &kp F1  &kp F2  &kp F3  &none  &none
-                     &trans  &trans  &trans                &trans   &trans  &trans
+&none  &none  &none       &none         &none         &kp C_PLAY_PAUSE  &none  &none  &none    &kp F7  &kp F8  &kp F9  &none  &none
+&none  &none  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT        &none  &none  &kp F10  &kp F4  &kp F5  &kp F6  &none  &none
+&none  &none  &none       &none         &kp C_MUTE    &kp C_STOP                      &none    &kp F1  &kp F2  &kp F3  &none  &none
+                          &trans        &trans        &trans                          &trans   &trans  &trans
             >;
         };
 
         extra_layer_2 {
             display-name = "GAMING";
             bindings = <
-&none  &kp Q  &kp W  &kp E              &kp R  &kp T       &none  &none  &kp Y    &kp U  &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D              &kp F  &kp G       &none  &none  &kp H    &kp J  &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C              &kp V  &kp B                     &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &ctrl_shift_super  &mo 1  &space_tab                &kp RET  &mo 2  &alt_ralt
+&none  &kp Q  &kp W  &kp E         &kp R  &kp T       &none  &none  &kp Y    &kp U  &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D         &kp F  &kp G       &none  &none  &kp H    &kp J  &kp K      &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &kp C         &kp V  &kp B                     &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &shift_super  &mo 1  &space_tab                &kp RET  &mo 2  &alt_ralt
             >;
 
             sensor-bindings =
@@ -211,10 +225,10 @@
         extra_layer_3 {
             display-name = "MOUSE";
             bindings = <
-&none  &none  &none  &none              &none     &none       &none  &none  &none      &none           &none           &none         &none            &none
-&none  &none  &none  &mkp MB1           &mkp MB2  &mkp MB3    &none  &none  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
-&none  &none  &none  &mkp MB4           &mkp MB5  &none                     &none      &none           &none           &none         &none            &none
-                     &ctrl_shift_super  &trans    &space_tab                &kp ENTER  &trans          &alt_ralt
+&none  &none  &none  &none         &none     &none       &none  &none  &none      &none           &none           &none         &none            &none
+&none  &none  &none  &mkp MB1      &mkp MB2  &mkp MB3    &none  &none  &none      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
+&none  &none  &none  &mkp MB4      &mkp MB5  &none                     &none      &none           &none           &none         &none            &none
+                     &shift_super  &trans    &space_tab                &kp ENTER  &trans          &alt_ralt
             >;
         };
 
@@ -229,31 +243,31 @@
         };
 
         extra_layer_5 {
-            display-name = "MEDIA";
+            display-name = "EXTRA 5";
             bindings = <
-&none  &none  &none  &none       &none             &none   &none  &none  &none       &none           &none         &none         &none       &none
-&none  &none  &none  &kp C_STOP  &kp C_PLAY_PAUSE  &none   &none  &none  &kp C_MUTE  &kp C_PREVIOUS  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none
-&none  &none  &none  &none       &none             &none                 &none       &none           &none         &none         &none       &none
-                     &trans      &trans            &trans                &trans      &trans          &trans
+&none  &none  &none  &none   &none   &none   &none  &none  &none   &none   &none   &none  &none  &none
+&none  &none  &none  &none   &none   &none   &none  &none  &none   &none   &none   &none  &none  &none
+&none  &none  &none  &none   &none   &none                 &none   &none   &none   &none  &none  &none
+                     &trans  &trans  &trans                &trans  &trans  &trans
             >;
         };
 
         extra_layer_6 {
             display-name = "EXTRA 6";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+                     &none  &none  &none                &none  &none  &none
             >;
         };
 
         extra_layer_7 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none                &none  &none  &none  &none  &none  &none
+                     &none  &none  &none                &none  &none  &none
             >;
         };
     };
