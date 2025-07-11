@@ -21,85 +21,85 @@
         bckspc_ctrl-bckspc {
             bindings = <&mt LC(BACKSPACE) BACKSPACE>;
             key-positions = <9 10 11>;
-            layers = <0 1 2 3 4 6 7 8 9>;
+            layers = <0 4 4 4 4 6 7 8 9>;
         };
 
         tgl_layer_0 {
             bindings = <&to 0>;
             key-positions = <34 41>;
-            layers = <0 1 2 4 3 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_1 {
-            bindings = <&to 2>;
+            bindings = <&to 4>;
             key-positions = <41 35>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_2 {
-            bindings = <&to 1>;
+            bindings = <&to 4>;
             key-positions = <41 36>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_3 {
-            bindings = <&to 3>;
+            bindings = <&to 4>;
             key-positions = <41 37>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_4 {
             bindings = <&to 4>;
             key-positions = <41 23>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_5 {
             bindings = <&to 5>;
             key-positions = <41 24>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_6 {
             bindings = <&to 6>;
             key-positions = <41 25>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_7 {
             bindings = <&to 7>;
             key-positions = <41 9>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_8 {
             bindings = <&to 8>;
             key-positions = <41 10>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tgl_layer_9 {
             bindings = <&to 9>;
             key-positions = <41 11>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         del_ctrl-del {
             bindings = <&mt LC(DELETE) DELETE>;
             key-positions = <10 11>;
-            layers = <0 1 2 3 4 6 7 8 9>;
+            layers = <0 4 4 4 4 6 7 8 9>;
         };
 
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <3 2>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         tab {
             bindings = <&kp TAB>;
             key-positions = <2 3 4>;
-            layers = <0 2 1 3 4 5 6 7 8 9>;
+            layers = <0 4 4 4 4 5 6 7 8 9>;
         };
 
         windows_key {
@@ -120,7 +120,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MO_LAYER_1_2";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&mo 1>;
+            bindings = <&mo 1>, <&mo 2>;
 
             tapping-term-ms = <400>;
         };
@@ -148,23 +148,6 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
-
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |               | ENT |     | ALT |
-
-            bindings = <
-&none  &none  &kp QUESTION     &kp CARET    &kp DLLR       &kp GRAVE         &none  &none  &mt DOUBLE_QUOTES SQT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS   &kp ASTERISK         &none
-&none  &none  &kp PIPE         &kp AT_SIGN  &kp HASH       &kp AMPS          &none  &none  &kp CARET              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &mt BACKSLASH SLASH  &none
-&none  &none  &kp EXCLAMATION  &kp TILDE    &kp LESS_THAN  &kp GREATER_THAN                &kp UNDER              &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL  &kp PERCENT          &none
-                               &trans       &trans         &trans                          &trans                 &trans                &trans
-            >;
-        };
-
         lower_layer {
             display-name = "NUMBER";
 
@@ -179,6 +162,23 @@
 &none  &none  &kp PLUS      &kp MINUS  &kp EQUAL    &none   &none  &none  &kp NUMBER_0  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &none
 &none  &none  &kp ASTERISK  &kp SLASH  &kp PERCENT  &none                 &none         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
                             &trans     &trans       &trans                &trans        &trans        &trans
+            >;
+        };
+
+        raise_layer {
+            display-name = "SYMBOL";
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
+            // | CTRL |     |     |     |     |     |  LALT | RALT  |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |               |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |               | ENT |     | ALT |
+
+            bindings = <
+&none  &none  &kp QUESTION     &kp CARET    &kp DLLR       &kp GRAVE         &none  &none  &mt DOUBLE_QUOTES SQT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS   &kp ASTERISK         &none
+&none  &none  &kp PIPE         &kp AT_SIGN  &kp HASH       &kp AMPS          &none  &none  &kp CARET              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &mt BACKSLASH SLASH  &none
+&none  &none  &kp EXCLAMATION  &kp TILDE    &kp LESS_THAN  &kp GREATER_THAN                &kp UNDER              &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EQUAL  &kp PERCENT          &none
+                               &trans       &trans         &trans                          &trans                 &trans                &trans
             >;
         };
 
