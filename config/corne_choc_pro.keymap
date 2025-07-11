@@ -18,12 +18,6 @@
     combos {
         compatible = "zmk,combos";
 
-        bckspc_ctrl-bckspc {
-            bindings = <&mt LC(BACKSPACE) BACKSPACE>;
-            key-positions = <9 10 11>;
-            layers = <0 1 2 3 4 5 6 7 8 9>;
-        };
-
         tgl_layer_0 {
             bindings = <&to 0>;
             key-positions = <34 41>;
@@ -98,13 +92,25 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <2 3 4>;
+            key-positions = <3 4>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         windows_key {
             bindings = <&kp LEFT_WIN>;
             key-positions = <26 38>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
+        };
+
+        del_ctrl-deln {
+            bindings = <&mt LC(DELETE) DELETE>;
+            key-positions = <10 11>;
+            layers = <0 1 2 3 4 5 6 7 8 9>;
+        };
+
+        bckspc_ctrl-bckspc {
+            bindings = <&mt LC(BACKSPACE) BACKSPACE>;
+            key-positions = <10 9>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
     };
