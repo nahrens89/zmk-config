@@ -120,7 +120,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALT_RALT";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&kp RIGHT_ALT>;
+            bindings = <&sk LEFT_ALT>, <&sk RIGHT_ALT>;
         };
 
         mo_layer_1_2: mo_layer_1_2 {
