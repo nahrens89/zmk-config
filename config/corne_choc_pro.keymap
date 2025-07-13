@@ -148,9 +148,9 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E              &kp R      &kp T      &none  &none  &kp Y       &kp U             &kp I                &kp O              &kp P          &none
-&none  &kp A  &kp S  &kp D              &kp F      &kp G      &none  &none  &mt LEFT H  &mt DOWN_ARROW J  &mt UP_ARROW K       &mt RIGHT_ARROW L  &kp RIGHT_WIN  &none
-&none  &kp Z  &kp X  &kp C              &kp V      &kp B                    &kp N       &kp M             &mt SEMICOLON COMMA  &mt COLON PERIOD   &alt_ralt      &none
+&none  &kp Q  &kp W  &kp E              &kp R      &kp T      &none  &none  &kp Y       &kp U             &kp I                &kp O              &kp P         &none
+&none  &kp A  &kp S  &kp D              &kp F      &kp G      &none  &none  &mt LEFT H  &mt DOWN_ARROW J  &mt UP_ARROW K       &mt RIGHT_ARROW L  &alt_ralt     &none
+&none  &kp Z  &kp X  &kp C              &kp V      &kp B                    &kp N       &kp M             &mt SEMICOLON COMMA  &mt COLON PERIOD   &kp LEFT_GUI  &none
                      &mo_layer_symbols  &kp LCTRL  &kp SPACE                &kp RET     &kp RIGHT_SHIFT   &mo 2
             >;
 
