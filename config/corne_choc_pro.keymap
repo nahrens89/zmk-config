@@ -25,19 +25,19 @@
         };
 
         tgl_layer_1 {
-            bindings = <&to 4>;
+            bindings = <&to 1>;
             key-positions = <41 35>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_2 {
-            bindings = <&to 4>;
+            bindings = <&to 2>;
             key-positions = <41 36>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_3 {
-            bindings = <&to 4>;
+            bindings = <&to 3>;
             key-positions = <41 37>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
