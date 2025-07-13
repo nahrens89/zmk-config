@@ -121,6 +121,8 @@
             label = "ALT_RALT";
             #binding-cells = <0>;
             bindings = <&sk LEFT_ALT>, <&sk RIGHT_ALT>;
+
+            tapping-term-ms = <400>;
         };
 
         mo_layer_symbols: mo_layer_symbols {
