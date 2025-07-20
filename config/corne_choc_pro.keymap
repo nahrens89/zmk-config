@@ -20,61 +20,61 @@
 
         tgl_layer_0 {
             bindings = <&to 0>;
-            key-positions = <34 41>;
+            key-positions = <34 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_1 {
             bindings = <&to 1>;
-            key-positions = <35 40>;
+            key-positions = <35 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_2 {
             bindings = <&to 2>;
-            key-positions = <36 40>;
+            key-positions = <36 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_3 {
             bindings = <&to 3>;
-            key-positions = <37 40>;
+            key-positions = <37 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_4 {
             bindings = <&to 4>;
-            key-positions = <23 40>;
+            key-positions = <23 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_5 {
             bindings = <&to 5>;
-            key-positions = <24 40>;
+            key-positions = <24 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_6 {
             bindings = <&to 6>;
-            key-positions = <25 40>;
+            key-positions = <25 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_7 {
             bindings = <&to 7>;
-            key-positions = <9 40>;
+            key-positions = <9 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_8 {
             bindings = <&to 8>;
-            key-positions = <10 40>;
+            key-positions = <10 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
         tgl_layer_9 {
             bindings = <&to 9>;
-            key-positions = <11 40>;
+            key-positions = <11 40 45>;
             layers = <0 1 2 3 4 5 6 7 8 9>;
         };
 
