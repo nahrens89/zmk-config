@@ -130,6 +130,42 @@
 
             tapping-term-ms = <400>;
         };
+
+        h_left: h_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "H_LEFT";
+            bindings = <&kp H>, <&kp LEFT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        j_down: j_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "J_DOWN";
+            bindings = <&kp J>, <&kp DOWN_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        k_up: k_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "K_UP";
+            bindings = <&kp K>, <&kp UP_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        l_right: l_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L_RIGHT";
+            bindings = <&kp L>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -145,10 +181,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&none  &kp Q  &kp W  &kp E              &kp R      &kp T      &none  &none  &kp Y       &kp U             &kp I                &kp O              &kp P         &none
-&none  &kp A  &kp S  &kp D              &kp F      &kp G      &none  &none  &mt LEFT H  &mt DOWN_ARROW J  &mt UP_ARROW K       &mt RIGHT_ARROW L  &alt_ralt     &none
-&none  &kp Z  &kp X  &kp C              &kp V      &kp B                    &kp N       &kp M             &mt SEMICOLON COMMA  &mt COLON PERIOD   &kp LEFT_GUI  &none
-                     &mo_layer_symbols  &kp LCTRL  &kp SPACE                &kp RET     &kp RIGHT_SHIFT   &mo 2
+&none  &kp Q  &kp W  &kp E              &kp R      &kp T      &none  &none  &kp Y    &kp U            &kp I                &kp O             &kp P         &none
+&none  &kp A  &kp S  &kp D              &kp F      &kp G      &none  &none  &h_left  &j_down          &k_up                &l_right          &alt_ralt     &none
+&none  &kp Z  &kp X  &kp C              &kp V      &kp B                    &kp N    &kp M            &mt SEMICOLON COMMA  &mt COLON PERIOD  &kp LEFT_GUI  &none
+                     &mo_layer_symbols  &kp LCTRL  &kp SPACE                &kp RET  &kp RIGHT_SHIFT  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
