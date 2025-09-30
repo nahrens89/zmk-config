@@ -212,7 +212,7 @@
 
             bindings = <
 &none  &kp ASTERISK         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS   &none  &none  &none           &none           &none         &none            &none  &none
-&none  &mt SLASH BACKSLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
+&none  &mt BACKSLASH SLASH  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none  &none
 &none  &kp NUMBER_0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL                &none           &none           &none         &none            &none  &none
                                           &trans        &trans        &trans                   &trans          &trans          &trans
             >;
